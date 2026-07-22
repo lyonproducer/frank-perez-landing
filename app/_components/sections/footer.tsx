@@ -26,13 +26,13 @@ export function Footer() {
           className="flex flex-wrap items-center justify-center gap-6 text-xs font-bold uppercase tracking-[0.18em] text-muted md:justify-start"
         >
           {siteContent.navigation.map((item) => (
-            <Link
+            <a
               key={item.id}
-              href={`/${item.href}`}
+              href={item.href}
               className="transition-colors hover:text-paper"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </nav>
 

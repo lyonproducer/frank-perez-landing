@@ -101,7 +101,7 @@ export function Bio() {
                         animated={true}
                         colors={["#e8590c", "#f97316", "#7a2e12"]}
                       >
-                        <div className="rounded-xl border-l-4 border-orange-brand p-5 text-sm font-bold uppercase tracking-wider text-orange-brand sm:text-base">
+                        <div className="rounded-xl p-5 text-sm font-bold uppercase tracking-wider text-orange-brand sm:text-base">
                           🏆 {paragraph}
                         </div>
                       </BorderGlow>

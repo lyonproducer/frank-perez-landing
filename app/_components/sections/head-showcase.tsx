@@ -1,18 +1,30 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Magnet from "../effects/magnet";
 import { Particles } from "../effects/particles";
 
 export function HeadShowcase() {
+  const [particleSize, setParticleSize] = useState(0.8);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setParticleSize(window.innerWidth >= 768 ? 1.2 : 0.8);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section aria-label="Fran Pérez Portrait" className="relative overflow-hidden bg-ink py-20 lg:py-28">
       {/* Background Particles */}
       <Particles
         className="absolute inset-0 z-0"
         quantity={90}
-        size={0.8}
+        size={particleSize}
         ease={80}
         color="#6b2d12"
         refresh

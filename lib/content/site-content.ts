@@ -63,7 +63,7 @@ const rawSiteManifest: unknown = {
   },
   music: {
     eyebrow: "02 / Música",
-    title: "Escucha lo que viene.",
+    title: "Últimos lanzamientos.",
     description: "La discografía oficial de Fran Pérez disponible para escuchar en Spotify.",
     emptyState: "Discografía en preparación.",
     releases: [

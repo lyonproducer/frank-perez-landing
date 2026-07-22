@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { getAsset, siteContent } from "@/lib/content/site-content";
-import BorderGlow from "../effects/border-glow";
 import { ScrollTextReveal } from "../effects/scroll-text-reveal";
 import { SectionIntro } from "../section-intro";
 
@@ -88,23 +87,9 @@ export function Bio() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4 }}
-                      className="my-6"
+                      className="my-6 rounded-xl border border-orange-brand/30 bg-orange-brand/10 p-5 text-sm font-bold uppercase tracking-wider text-orange-brand sm:text-base"
                     >
-                      <BorderGlow
-                        edgeSensitivity={30}
-                        glowColor="24 90 55"
-                        backgroundColor="rgba(232, 89, 12, 0.08)"
-                        borderRadius={16}
-                        glowRadius={30}
-                        glowIntensity={1.2}
-                        coneSpread={25}
-                        animated={true}
-                        colors={["#e8590c", "#f97316", "#7a2e12"]}
-                      >
-                        <div className="rounded-xl p-5 text-sm font-bold uppercase tracking-wider text-orange-brand sm:text-base">
-                          🏆 {paragraph}
-                        </div>
-                      </BorderGlow>
+                      🏆 {paragraph}
                     </motion.div>
                   );
                 }

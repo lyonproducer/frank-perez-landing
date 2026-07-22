@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { getAsset, siteContent } from "@/lib/content/site-content";
 import { ScrollTextReveal } from "../effects/scroll-text-reveal";
 import { SectionIntro } from "../section-intro";
+import { ShineBorder } from "../effects/shine-border";
 
 export function Bio() {
   const copy = siteContent.bio;
@@ -25,7 +26,7 @@ export function Bio() {
           fill
           sizes="100vw"
           quality={85}
-          className="object-cover opacity-40 brightness-75 contrast-110 mix-blend-luminosity"
+          className="object-cover opacity-20 brightness-75 contrast-110 mix-blend-luminosity"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/65 to-ink/90" />
       </div>
@@ -59,6 +60,11 @@ export function Bio() {
               priority
               className="object-cover object-top"
               style={{ objectPosition: `${asset.focalPoint.x}% ${asset.focalPoint.y}%` }}
+            />
+            <ShineBorder
+              borderWidth={2}
+              duration={8}
+              shineColor={["#e8590c", "#f97316", "#7a2e12"]}
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
             {asset.caption ? (

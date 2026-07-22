@@ -485,7 +485,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       >
         <div
           ref={preLayersRef}
-          className="sm-prelayers absolute top-0 right-0 bottom-0 pointer-events-none z-[5]"
+          className="sm-prelayers absolute top-0 right-0 bottom-0 pointer-events-none z-5"
           aria-hidden="true"
         >
           {(() => {

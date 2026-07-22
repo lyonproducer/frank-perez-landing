@@ -11,10 +11,10 @@ export function HeadShowcase() {
       {/* Background Particles */}
       <Particles
         className="absolute inset-0 z-0"
-        quantity={150}
-        size={1.2}
+        quantity={90}
+        size={0.8}
         ease={80}
-        color="#e8590c"
+        color="#6b2d12"
         refresh
       />
 

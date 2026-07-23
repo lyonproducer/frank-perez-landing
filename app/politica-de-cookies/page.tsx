@@ -7,6 +7,9 @@ import { siteContent } from "@/lib/content/site-content";
 export const metadata: Metadata = {
   title: `Política de Cookies — ${siteContent.site.name}`,
   description: "Política de Cookies oficial del sitio web de Fran Pérez.",
+  alternates: {
+    canonical: `${siteContent.site.canonicalUrl.replace(/\/$/, "")}/politica-de-cookies`,
+  },
 };
 
 export default function PoliticaDeCookiesPage() {

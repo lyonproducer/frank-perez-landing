@@ -99,7 +99,7 @@ export function Navbar() {
           openMenuButtonColor="#000"
           changeMenuColorOnOpen={true}
           colors={["#7a2e12", "#e8590c"]}
-          logoUrl="/media/logos/fran-perez-logo-linear.webp"
+          logoUrl="/media/logos/Logotipo lineal B.png"
           accentColor="#e8590c"
           isFixed={true}
         />

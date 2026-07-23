@@ -7,36 +7,44 @@ const INSTAGRAM_URL = "https://www.instagram.com/franperezve/";
 
 const galleryImages = [
   {
-    src: "/media/photos/gallery-1.jpg",
+    src: "/media/photos/gallery-1.webp",
     alt: "Fran Pérez con lentes de sol",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/gallery-2.jpg",
+    src: "/media/photos/gallery-2.webp",
     alt: "Fran Pérez en la cabina de DJ con auriculares",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/gallery-3.jpg",
+    src: "/media/photos/gallery-3.webp",
     alt: "Fran Pérez en AGAIN Club",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/gallery-4.jpg",
+    src: "/media/photos/gallery-4.webp",
     alt: "Fran Pérez de espalda con camiseta gráfica",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
   {
     src: "/media/photos/fran-bio-vertical-preview.webp",
     alt: "Fran Pérez en sesión de fotos",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/fran-hero-dj-frontal-horizontal.jpg",
+    src: "/media/photos/fran-hero-dj-frontal-horizontal.webp",
     alt: "Fran Pérez en vivo frente a la cabina",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/fran-hero-live-horizontal.jpg",
+    src: "/media/photos/fran-hero-live-horizontal.webp",
     alt: "Fran Pérez actuando en festival",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/fran-booking-vertical-preview.jpg",
+    src: "/media/photos/fran-booking-vertical-preview.webp",
     alt: "Fran Pérez en presentación oficial",
+    postUrl: "https://www.instagram.com/franperezve/",
   },
 ];
 
@@ -57,13 +65,13 @@ export function InstagramGallery() {
           </h2>
           <div className="mt-2 h-[2px] w-8 bg-paper/40" />
         </motion.div>
-
+ 
         {/* 8-Photo Grid */}
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {galleryImages.map((img, idx) => (
             <motion.a
               key={idx}
-              href={INSTAGRAM_URL}
+              href={img.postUrl}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 16 }}

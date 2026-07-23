@@ -6,38 +6,39 @@ import { HyperText } from "../effects/hyper-text";
 
 export function Hero() {
   const copy = siteContent.hero;
-  const firstAsset = getAsset(copy.imageIds[0]);
-  const secondAsset = getAsset(copy.imageIds[1]);
+  const isSequence = copy.imageIds.length > 1;
 
   return (
     <section id="top" aria-labelledby="hero-title" className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-ink">
-      <div className="hero-image-sequence absolute inset-0 -z-20" role="img" aria-label={firstAsset.alt}>
-        <div className="hero-image-sequence__layer hero-image-sequence__layer--first absolute inset-0" aria-hidden="true">
-          <Image
-            src={firstAsset.src}
-            alt=""
-            aria-hidden="true"
-            fill
-            priority
-            sizes="100vw"
-            quality={78}
-            className="object-cover"
-            style={{ objectPosition: `${firstAsset.focalPoint.x}% ${firstAsset.focalPoint.y}%` }}
-          />
-        </div>
-        <div className="hero-image-sequence__layer hero-image-sequence__layer--second absolute inset-0" aria-hidden="true">
-          <Image
-            src={secondAsset.src}
-            alt=""
-            aria-hidden="true"
-            fill
-            loading="lazy"
-            sizes="100vw"
-            quality={78}
-            className="object-cover"
-            style={{ objectPosition: `${secondAsset.focalPoint.x}% ${secondAsset.focalPoint.y}%` }}
-          />
-        </div>
+      <div className="hero-image-sequence absolute inset-0 -z-20" role="img" aria-label={getAsset(copy.imageIds[0]).alt}>
+        {copy.imageIds.map((id, index) => {
+          const asset = getAsset(id);
+          let layerClass = "absolute inset-0";
+          if (isSequence) {
+            if (index === 0) {
+              layerClass = "hero-image-sequence__layer hero-image-sequence__layer--first absolute inset-0";
+            } else if (index === 1) {
+              layerClass = "hero-image-sequence__layer hero-image-sequence__layer--second absolute inset-0";
+            } else if (index === 2) {
+              layerClass = "hero-image-sequence__layer hero-image-sequence__layer--third absolute inset-0";
+            }
+          }
+          return (
+            <div key={id} className={layerClass} aria-hidden="true">
+              <Image
+                src={asset.src}
+                alt=""
+                aria-hidden="true"
+                fill
+                priority={index === 0}
+                sizes="100vw"
+                quality={78}
+                className="object-cover"
+                style={{ objectPosition: `${asset.focalPoint.x}% ${asset.focalPoint.y}%` }}
+              />
+            </div>
+          );
+        })}
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/55 to-ink/10" aria-hidden="true" />
       <div className="absolute inset-0 -z-10 bg-ink/10" aria-hidden="true" />

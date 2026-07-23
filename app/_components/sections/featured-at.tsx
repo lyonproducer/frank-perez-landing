@@ -19,7 +19,7 @@ export function FeaturedAt() {
       {/* Background Photo with Dark Overlay */}
       <div className="absolute inset-0 -z-10 select-none pointer-events-none" aria-hidden="true">
         <Image
-          src="/media/photos/featured-at-bg.jpg"
+          src="/media/photos/featured-at-bg.webp"
           alt=""
           fill
           sizes="100vw"

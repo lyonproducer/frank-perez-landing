@@ -21,7 +21,7 @@ export function Bio() {
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none" aria-hidden="true">
         <Image
-          src="/media/footer-bg.jpg"
+          src="/media/footer-bg.webp"
           alt=""
           fill
           sizes="100vw"

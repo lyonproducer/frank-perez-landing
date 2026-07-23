@@ -70,10 +70,18 @@ const sectionCopySchema = z.object({
 });
 
 const heroImageIdsSchema = z
-  .tuple([z.string().min(1), z.string().min(1)])
-  .refine(([firstImageId, secondImageId]) => firstImageId !== secondImageId, {
-    message: "Hero image IDs must be distinct",
-  });
+  .array(z.string().min(1))
+  .min(1)
+  .max(3)
+  .refine(
+    (ids) => {
+      const uniqueIds = new Set(ids);
+      return uniqueIds.size === ids.length;
+    },
+    {
+      message: "Hero image IDs must be distinct",
+    }
+  );
 
 const heroSchema = sectionCopySchema.extend({
   ctaLabel: z.string().min(1),

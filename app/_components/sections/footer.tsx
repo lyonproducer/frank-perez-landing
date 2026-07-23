@@ -8,7 +8,7 @@ export function Footer() {
       {/* Background Image with Dark Overlay & Desaturation Filter */}
       <div className="absolute inset-0 select-none pointer-events-none" aria-hidden="true">
         <Image
-          src="/media/footer-bg.jpg"
+          src="/media/footer-bg.webp"
           alt=""
           fill
           sizes="100vw"

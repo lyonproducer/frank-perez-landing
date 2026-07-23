@@ -7,6 +7,9 @@ import { siteContent } from "@/lib/content/site-content";
 export const metadata: Metadata = {
   title: `Política de Privacidad — ${siteContent.site.name}`,
   description: "Política de Privacidad oficial del sitio web de Fran Pérez.",
+  alternates: {
+    canonical: `${siteContent.site.canonicalUrl.replace(/\/$/, "")}/politica-de-privacidad`,
+  },
 };
 
 export default function PoliticaDePrivacidadPage() {

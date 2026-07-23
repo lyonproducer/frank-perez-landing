@@ -27,8 +27,8 @@ const galleryImages = [
     postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/fran-bio-vertical-preview.webp",
-    alt: "Fran Pérez en sesión de fotos",
+    src: "/media/photos/gallery-5.webp",
+    alt: "Fran Pérez con sombrero frente a un colorido mural de graffiti",
     postUrl: "https://www.instagram.com/franperezve/",
   },
   {
@@ -42,8 +42,8 @@ const galleryImages = [
     postUrl: "https://www.instagram.com/franperezve/",
   },
   {
-    src: "/media/photos/fran-booking-vertical-preview.webp",
-    alt: "Fran Pérez en presentación oficial",
+    src: "/media/photos/gallery-6.webp",
+    alt: "Fran Pérez con amigos en el sillón de un club",
     postUrl: "https://www.instagram.com/franperezve/",
   },
 ];
